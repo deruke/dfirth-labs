@@ -1,2 +1,3 @@
-# AndroidLabs
-Android labs for mobile application penetration testing class.
+# DFIRTH Labs
+
+Digital Forensics, Incident Response, and Threat Hunting Labs.
