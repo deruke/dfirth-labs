@@ -1,5 +1,7 @@
 ## KAPE Artifact Collection
 
+### Note that this lab is optional and is provided for in case the student wants to collect their own KAPE data from a disk image.
+
 This lab will demonstrate how to mount a raw disk image on a Windows host and use the Kroll Artifact Parser (KAPE) to collect and parse forensic artifacts.  KAPE can collect evidence from a live disk or a mounted image.
 
 A raw disk image is a bit for bit copy of a physical disk, typically created with the Linux utility dd, but is common with other forensics software.  You will likely encounter raw disk images in your DFIRTH career.
