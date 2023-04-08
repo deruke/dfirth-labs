@@ -6,7 +6,7 @@ In Debian and Ubuntu flavors of Linux, authentication logs are usually stored in
 
 While these logs may be familiar to you, its not the specific log file format that is important for this lab, but the process of taking a large amount of text data and using the Linux command line to find the few log entries we care about to answer our questions.  The goal is a data reduction process that can be applied to any text based log data.
 
-Type `cd /data/ssh_auth_logs` to change to the directory that contains the authentication logs copied from the server in question.  Then use the `ls` to list the contents of the directory.  Unzip the log files with `unzip ssh_auth_logs.zip`.
+Type `cd /data/course_labs/ssh_auth_logs` to change to the directory that contains the authentication logs copied from the server in question.  Then use the `ls` to list the contents of the directory.  Unzip the log files with `unzip ssh_auth_logs.zip`.
 
 &nbsp;
 
