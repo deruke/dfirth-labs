@@ -1,5 +1,5 @@
-Welcome to the Labs for Incident Response Foundations.
-
+## Welcome to the Labs for Incident Response Foundations.
+&nbsp;
 
 - [Lab 0: Virtual Machine Configuration](Labs/vm-setup/vm-setup.md)
 - [Lab 1: Linux Authentication Log Analysis ](Labs/sshd_logs/sshd_logs.md)
@@ -10,7 +10,7 @@ Welcome to the Labs for Incident Response Foundations.
 
 
 
-
+&nbsp;
 
 Check out our other training at:
 
