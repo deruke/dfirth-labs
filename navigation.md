@@ -1,6 +1,6 @@
 # Incident Response Foundations Labs
-
 [IR Foundations Labs]()
+
 - [Virtual Machine Configuration](Labs/vm-setup/vm-setup.md)
 - [Linux Authentication Log Analysis ](Labs/sshd_logs/sshd_logs.md)
 - [Optional: Kape Evidence Collection](Labs/kape-evidence-collection/kape-evidence-collection.md)
