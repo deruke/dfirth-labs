@@ -52,6 +52,9 @@ Some folks in the security community would pause here and say something about me
 
 Let's set up a shared drive, on your host system create a folder and name it something like "vm_share".
 
+
+### MacOS
+
 On VMWare Fusion, go to the "Virtual Machine" menu and select Sharing and Sharing Settings.
 
 
@@ -63,6 +66,34 @@ Next add an entry for your folder that you created.  Note that you will have to 
 
 &nbsp;
 <img src="images/vm_setup_5.png"  width="60%" height="30%">
+&nbsp;
+
+After reboot, open the terminal window and type the following:
+
+```
+sudo mount-shared-folders
+```
+Don't forget to practice with tab completion!
+
+&nbsp;
+<img src="images/vm_setup_6.png"  width="60%" height="30%">
+&nbsp;
+
+Now the shared folder will be at the mount point `/mnt/hgfs/<your_folder_name>`
+
+### Windows
+
+Create a folder to share data between the host and virtual machine.  Go to the settings screen for the virtual machine and click the "Options" tab.
+
+&nbsp;
+<img src="images/vm_setup_7.png"  width="60%" height="30%">
+&nbsp;
+
+Under the Options tab, click "Shared Folders" and then "Always Enabled", and add the folder you want to share.
+
+
+&nbsp;
+<img src="images/vm_setup_8.png"  width="60%" height="30%">
 &nbsp;
 
 After reboot, open the terminal window and type the following:
