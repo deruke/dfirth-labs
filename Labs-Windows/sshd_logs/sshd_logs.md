@@ -18,13 +18,12 @@ From the desktop shortcut, double-click the `wsl - Shortcut` icon and launch WSL
 
 &nbsp;
 
-Type `cd /data/course_labs/ssh_auth_logs` to change to the directory that contains the authentication logs copied from the server in question.  Then use the `ls` to list the contents of the directory.  Unzip the log files with `unzip ssh_auth_logs.zip`.
+Type `cd /mnt/c/Users/Administrator/Desktop/lab_data/Incident_Response_Foundations/course_labs_data/course_labs/ssh_auth_logs/` to change to the directory that contains the authentication logs copied from the server in question.  Then use the `ls` to list the contents of the directory. 
 
 
-To make parsing all the logs simultaneously easier, run `gunzip *.gz` to decompress the older log files.
 
 &nbsp;
-<img src="images/ssh_logs_lab_terminal_1.png"  width="60%" height="30%">
+<img src="images/ssh_logs_windows_wsl_1.png"  width="60%" height="30%">
 
 &nbsp;
 
@@ -32,7 +31,7 @@ Use the word count command (wc) with the -l flag to count the number of lines in
 
 &nbsp;
 
-<img src="images/ssh_logs_lab_terminal_2.png"  width="60%" height="30%">
+<img src="images/ssh_logs_windows_wsl_2.png"  width="60%" height="30%">
 
 &nbsp;
 
@@ -44,7 +43,7 @@ wc -l *.log*
 
 &nbsp;
 
-<img src="images/ssh_logs_lab_terminal_3.png"  width="60%" height="30%">
+<img src="images/ssh_logs_windows_wsl_3.png"  width="60%" height="30%">
 
 &nbsp;
 
@@ -54,7 +53,7 @@ There are many commands that can be used for displaying the text of a file.  Mos
 
 &nbsp;
 
-<img src="images/ssh_logs_lab_terminal_4.png"  width="60%" height="30%">
+<img src="images/ssh_logs_windows_wsl_4.png"  width="60%" height="30%">
 
 &nbsp;
 
@@ -65,7 +64,7 @@ Filtering out the root user makes 100 thousand lines of text down to 15 thousand
 
 &nbsp;
 
-<img src="images/ssh_logs_lab_terminal_5.png"  width="60%" height="30%">
+<img src="images/ssh_logs_windows_wsl_5.png"  width="60%" height="30%">
 
 &nbsp;
 
@@ -79,7 +78,7 @@ grep root auth.log | grep -iv Disconnected
 
 &nbsp;
 
-<img src="images/ssh_logs_lab_terminal_6.png"  width="60%" height="30%">
+<img src="images/ssh_logs_windows_wsl_6.png"  width="60%" height="30%">
 
 &nbsp;
 
@@ -93,7 +92,7 @@ grep root auth.log | grep -iv Disconnected | grep -v closed | grep -v CRON | gre
 
 &nbsp;
 
-<img src="images/ssh_logs_lab_terminal_7.png"  width="60%" height="30%">
+<img src="images/ssh_logs_windows_wsl_7.png"  width="60%" height="30%">
 
 &nbsp;
 
@@ -101,7 +100,7 @@ Reading through the output, we notice that the term "Accepted" seems to indicate
 
 &nbsp;
 
-<img src="images/ssh_logs_lab_terminal_8.png"  width="60%" height="30%">
+<img src="images/ssh_logs_windows_wsl_8.png"  width="60%" height="30%">
 
 &nbsp;
 
@@ -115,7 +114,7 @@ There are 34 lines so there is not a need for further filtering.  We can see tha
 
 &nbsp;
 
-<img src="images/ssh_logs_lab_terminal_9.png"  width="60%" height="30%">
+<img src="images/ssh_logs_windows_wsl_9.png"  width="60%" height="30%">
 
 &nbsp;
 
