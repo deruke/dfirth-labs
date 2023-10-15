@@ -103,7 +103,7 @@ zcat ssl.12_00_00-13_00_00.log.gz | zeek-cut -d ts server_name | grep -E "d3vd0x
 ```
 
 &nbsp;
-<img src="images/images/zeek_command_line_windows_7.png"  width="60%" height="30%">
+<img src="images/zeek_command_line_windows_7.png"  width="60%" height="30%">
 
 &nbsp;
 
