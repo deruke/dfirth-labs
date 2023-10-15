@@ -50,7 +50,7 @@ This is getting us closer, but its not clear (without reading the manual) what t
 
 It appears that most of the data is from the FileSystem module and the EventLog module and the file sizes for the gathered data seem to be what we would expect.  We saw in an an earlier lab that the command line is one way to view, filter, and sort data text files.  You can also use spreadsheet programs, but know that they have data size limitations and have trouble with large files.  The files in this lab do not approach that limit, but it is good to use tools from the start that will meet your needs.
 
-The [TAD Viewer](https://www.tadviewer.com/) is an example fast viewer program that can handle larger data sets.  Launch it from the menu bar at the bottom of the VM and select the /home/dfir/temp.csv file.
+The [TAD Viewer](https://www.tadviewer.com/) is an example fast viewer program that can handle larger data sets.  Launch it from the menu bar at the bottom of the VM.
 
 &nbsp;
 
@@ -58,7 +58,7 @@ The [TAD Viewer](https://www.tadviewer.com/) is an example fast viewer program t
 
 &nbsp;
 
-When starting a host investigation that involved malware, analyzing process execution is a good place to start. Select "Other Locations" option and select the "Computer" icon and navigate to `/data/course_labs/endpoint-kape_data/kape_module_out/ProgramExecution` and open 'the 20220301002851_PECmd_Output.csv' file.
+When starting a host investigation that involved malware, analyzing process execution is a good place to start. Select the "Other Locations" option and select the "Computer" icon and navigate to `/data/course_labs/endpoint-kape_data/kape_module_out/ProgramExecution` and open 'the 20220301002851_PECmd_Output.csv' file.
 
 
 &nbsp;

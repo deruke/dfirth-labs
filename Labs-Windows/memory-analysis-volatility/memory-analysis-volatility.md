@@ -4,30 +4,35 @@ The information contained in a computer's volatile data (or in the RAM of the co
 
 From a host based perspective, one of the more important questions is what process is communicating with what IP address and can we get more information from that process?
 
-Open a command prompt and change directory into the `/data/course_labs/memory-analysis-volatility` directory.  There will be two files, we will start with the 'physmem2.raw' file, this is a raw memory dump of a system that is suspected of having a backdoor running on it. The vr_nestat_enriched.zip file we will use to compare analysis techniques.
+Open a PowerShell prompt and change directory into the directory containing the memory image.
+
+ `cd .\Desktop\lab_data\Incident_Response_Foundations\course_labs_data\course_labs\memory-analysis-volatility\` 
+ 
+The 'physmem2.raw' file is a raw memory dump of a system that is suspected of having a backdoor running on it. The vr_nestat_enriched.zip file we will use to compare analysis techniques.
 
 There are two versions of Volatility, version 2 and version 3.  Volatility2 is deprecated and runs on Python2.  Volatility3 is the current version and runs on Python3.
 
-Volatility2 has more analysis plugins that Volatility3, but there could be a time in your analysis career that you want version2 for specific capabilities.  Both are installed on the course VM.  Volatility2 is the `vol.py` command and Volatility3 is the `vol` command.
+Volatility2 has more analysis plugins that Volatility3, but there could be a time in your analysis career that you want version2 for specific capabilities.  Both are installed in the AMI.  
 
 We will use [Volatility3](https://volatility3.readthedocs.io/en/stable/) for this lab.
 
 
 &nbsp;
 
-<img src="images/memory_analysis_volatility_0.png"  width="60%" height="30%">
+<img src="images/memory_analysis_volatility_windows_0.png"  width="60%" height="30%">
 
 &nbsp;
 
 The first module we should run is the 'windows.info' to make sure Volatility can read the image file and that it seems to properly identify the Operating System as Windows 10.
 
 ```
-vol -f physmem2.raw windows.info
+C:\tools\volatility3\volatility3-develop\vol.py -f .\physmem2.raw windows.info
+
 ```
 
 &nbsp;
 
-<img src="images/memory_analysis_volatility_1.png"  width="60%" height="30%">
+<img src="images/memory_analysis_volatility_windows_1.png"  width="60%" height="30%">
 
 &nbsp;
 
@@ -38,13 +43,13 @@ If you have some volatility experience, you may wish to stop the step-by-step la
 First use the 'windows.plist' module to output the running processes from the system we are investigating.  
 
 ```
-vol -f physmem2.raw windows.pslist
+C:\tools\volatility3\volatility3-develop\vol.py -f .\physmem2.raw windows.pslist
 ```
 
 
 &nbsp;
 
-<img src="images/memory_analysis_volatility_2.png"  width="60%" height="30%">
+<img src="images/memory_analysis_volatility_windows_2.png"  width="60%" height="30%">
 
 &nbsp;
 
@@ -53,34 +58,43 @@ Next we will run the 'windows.netscan' to investigate network connections.  The 
 
 &nbsp;
 
-<img src="images/memory_analysis_volatility_3.png"  width="60%" height="30%">
+<img src="images/memory_analysis_volatility_windows_3.png"  width="60%" height="30%">
 
 &nbsp;
 
 One problem you have likely just noticed is the output to the screen (also known as standard output, or Stdout) is less than ideal to read because the output likely overlaps the length and width of the screen.  One trick I like to use is to redirect the standard output to a text file, especially if the command takes more than a few seconds to run or if there are thousands of lines of output.
 
-Use the up arrow key to re-rerun the last two volatility commands to match the following:
+While these files have been prestaged for you, to create them yourself you would use the following commands:
 
 ```
-vol -f physmem2.raw windows.netscan > windows_netscan.txt
-vol -f physmem2.raw windows.pslist > windows_pslist.txt
+C:\tools\volatility3\volatility3-develop\vol.py -f .\physmem2.raw windows.netscan > windows_netscan.txt
+C:\tools\volatility3\volatility3-develop\vol.py -f .\physmem2.raw windows.pslist > windows_pslist.txt
 
 ```
 
-One trick to make text files that have more columns of data than will fit in your terminal window is to use the '-S' switch with the less command.  This will allow you to use the right and left arrows to scroll across the data.  View each of these files and see if you can determine what process seems to be doing something suspicious.
-
+Open the file location with the two staged files in Windows Explorer the defaults location is : 
 
 
 ```
-less -S windows_netscan.txt
-less -S windows_pslist.txt
+C:\Users\Administrator\Desktop\lab_data\Incident_Response_Foundations\course_labs_data\course_labs\memory-analysis-volatility
+
 ```
+
+Right click on each file and open them in Notepad ++
+
+&nbsp;
+
+<img src="images/memory_analysis_volatility_windows_4.png"  width="60%" height="30%">
+
+&nbsp;
+
+
 
 It appears that powerhshell.exe process has launched the ssh.exe process.  In most circumstances in a Windows environment this would make me suspicious unless the user was a systems administrator.
 
 &nbsp;
 
-<img src="images/memory_analysis_volatility_4.png"  width="60%" height="30%">
+<img src="images/memory_analysis_volatility_windows_5.png"  width="60%" height="30%">
 
 &nbsp;
 
@@ -88,7 +102,7 @@ In the network output, we see that ssh.exe is connected to an external IP addres
 
 &nbsp;
 
-<img src="images/memory_analysis_volatility_5.png"  width="60%" height="30%">
+<img src="images/memory_analysis_volatility_windows_6.png"  width="60%" height="30%">
 
 &nbsp;
 
@@ -96,7 +110,7 @@ There is another network connection associated with ssh.exe that looks like it i
 
 &nbsp;
 
-<img src="images/memory_analysis_volatility_6.png"  width="60%" height="30%">
+<img src="images/memory_analysis_volatility_windows_7.png"  width="60%" height="30%">
 
 &nbsp;
 
@@ -106,12 +120,12 @@ Since it appears that powershell.exe was the parent process for ssh.exe, we shou
 
 
 ```
-vol -f physmem2.raw windows.cmdline.CmdLine
+C:\tools\volatility3\volatility3-develop\vol.py -f .\physmem2.raw windows.cmdline.CmdLine
 ```
 
 &nbsp;
 
-<img src="images/memory_analysis_volatility_7.png"  width="60%" height="30%">
+<img src="images/memory_analysis_volatility_windows_8.png"  width="60%" height="30%">
 
 &nbsp;
 
