@@ -91,7 +91,7 @@ Click the header of the "Time Created" column to sort the data from newest to ol
 
 &nbsp;
 
-<img src="images/images/endpoint-kape_data_windows_9.png"  width="60%" height="30%">
+<img src="images/endpoint-kape_data_windows_9.png"  width="60%" height="30%">
 
 &nbsp;
 
