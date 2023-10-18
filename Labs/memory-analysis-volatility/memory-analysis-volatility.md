@@ -76,7 +76,7 @@ less -S windows_netscan.txt
 less -S windows_pslist.txt
 ```
 
-It appears that powerhshell.exe process has launched the ssh.exe process.  In most circumstances in a Windows environment this would make me suspicious unless the user was a systems administrator.
+It appears that the powerhshell.exe process has launched the ssh.exe process.  In most circumstances in a Windows environment this would make me suspicious unless the user was a systems administrator.
 
 &nbsp;
 
