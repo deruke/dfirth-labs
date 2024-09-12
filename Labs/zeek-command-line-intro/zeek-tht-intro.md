@@ -1,4 +1,4 @@
-## Zeek Command Line Analysis with THT
+## Zeek Command Line Analysis
 
 This lab will introduce Zeek logs and how to parse them with the Linux command line.  Since Zeek logs are text based, there are built in commands in Linux that are very useful for processing them.  It is possible to complete and entire investigation of events in Zeek logs just using the command line, in fact, in many ways it is the preferred method.
 

@@ -21,6 +21,7 @@
 - [Lab 2: Endpoint Logs KAPE Data Analysis](Labs-Windows/endpoint-kape_data/endpoint-kape_data.md)
 - [Lab 3: Host Memory Analysis with Volatility](Labs-Windows/memory-analysis-volatility/memory-analysis-volatility.md)
 - [Lab 4: Zeek Command Line Analysis Intro](Labs-Windows/zeek-command-line-intro/zeek-tht-intro.md)
+- [Lab 5: M365 Audit Log](Labs-Windows/m365_logs_intro/m365-log-analysis-windows.md)
 
 ### Optional Labs
 
