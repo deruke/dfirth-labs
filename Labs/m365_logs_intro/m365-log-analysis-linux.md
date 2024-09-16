@@ -42,7 +42,7 @@ Take a quick look at the `ParsUAL.ps1` script with the `less` command.  This scr
 
 &nbsp;
 
-<img src="images/m365_logs_intro_linux_3.png""  width="90%" height="60%">
+<img src="images/m365_logs_intro_linux_3.png"  width="90%" height="60%">
 
 &nbsp;
 
