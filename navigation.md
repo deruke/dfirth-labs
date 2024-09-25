@@ -7,6 +7,7 @@
 - [Endpoint Logs KAPE Data Analysis](Labs/endpoint-kape_data/endpoint-kape_data.md)
 - [Host Memory Analysis with Volatility](Labs/memory-analysis-volatility/memory-analysis-volatility.md)
 - [Zeek Command Line Analysis Intro](Labs/zeek-command-line-intro/zeek-tht-intro.md)
+- [M365 Audit Log](Labs/m365_logs_intro/m365-log-analysis-linux.md)
 
 
 [IR Foundations Labs - AWS Windows Workstation]()
@@ -17,3 +18,4 @@
 - [Endpoint Logs KAPE Data Analysis](Labs-Windows/endpoint-kape_data/endpoint-kape_data.md)
 - [Host Memory Analysis with Volatility](Labs-Windows/memory-analysis-volatility/memory-analysis-volatility.md)
 - [Zeek Command Line Analysis Intro](Labs-Windows/zeek-command-line-intro/zeek-tht-intro.md)
+- [M365 Audit Log](Labs-Windows/m365_logs_intro/m365-log-analysis-windows.md)
